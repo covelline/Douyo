@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E52D5B519EE6B44006F2733 /* DouyoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52D5B419EE6B44006F2733 /* DouyoColor.swift */; };
 		4EFAF0E019EE3D04004E2FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFAF0DF19EE3D04004E2FCC /* AppDelegate.swift */; };
 		4EFAF0E719EE3D04004E2FCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFAF0E619EE3D04004E2FCC /* Images.xcassets */; };
 		4EFAF0EA19EE3D04004E2FCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFAF0E819EE3D04004E2FCC /* LaunchScreen.xib */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E52D5B419EE6B44006F2733 /* DouyoColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DouyoColor.swift; sourceTree = "<group>"; };
 		4EFAF0DA19EE3D04004E2FCC /* Douyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFAF0DE19EE3D04004E2FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFAF0DF19EE3D04004E2FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		4EFAF10019EE3E46004E2FCC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4E52D5B419EE6B44006F2733 /* DouyoColor.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E52D5B519EE6B44006F2733 /* DouyoColor.swift in Sources */,
 				4EFAF0E019EE3D04004E2FCC /* AppDelegate.swift in Sources */,
 				4EFAF10319EE3EBF004E2FCC /* DouyoViewController.swift in Sources */,
 				4EFAF10A19EE42B2004E2FCC /* QuestionViewController.swift in Sources */,
@@ -453,6 +457,7 @@
 				4EFAF0FB19EE3D04004E2FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EFAF0FC19EE3D04004E2FCC /* Build configuration list for PBXNativeTarget "DouyoTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +466,7 @@
 				4EFAF0FE19EE3D04004E2FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

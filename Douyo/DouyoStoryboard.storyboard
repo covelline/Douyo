@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoK-2J-MdQ">
-                                <rect key="frame" x="36" y="238" width="248" height="60"/>
+                                <rect key="frame" x="36" y="288" width="248" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="wxb-SC-ngE"/>
@@ -29,20 +29,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pushPositiveButton:" destination="r5U-0i-KGq" eventType="touchUpInside" id="Zf6-CQ-Uz5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atc-09-0dc">
-                                <rect key="frame" x="36" y="338" width="248" height="60"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="deM-r4-MB1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Bad">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushNegativeButton:" destination="r5U-0i-KGq" eventType="touchUpInside" id="bsA-8d-OFK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWm-Y9-BmL">
@@ -74,35 +60,66 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◯◯ってどうよ？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W22-uY-usO">
-                                <rect key="frame" x="36" y="40" width="248" height="158"/>
+                                <rect key="frame" x="36" y="40" width="248" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="03K-az-9qh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ってどうよ？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX0-Hd-p1v">
+                                <rect key="frame" x="36" y="140" width="248" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dA1-IM-tt9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atc-09-0dc">
+                                <rect key="frame" x="36" y="388" width="248" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="deM-r4-MB1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Bad">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushNegativeButton:" destination="r5U-0i-KGq" eventType="touchUpInside" id="bsA-8d-OFK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="W22-uY-usO" secondAttribute="trailing" constant="20" id="0gQ-HF-LqT"/>
-                            <constraint firstItem="glJ-aV-vlQ" firstAttribute="top" secondItem="atc-09-0dc" secondAttribute="bottom" constant="170" id="9nL-uJ-0FW"/>
+                            <constraint firstItem="glJ-aV-vlQ" firstAttribute="top" secondItem="atc-09-0dc" secondAttribute="bottom" constant="120" id="9nL-uJ-0FW"/>
                             <constraint firstItem="glJ-aV-vlQ" firstAttribute="top" secondItem="gzM-oI-li0" secondAttribute="bottom" constant="20" id="KMC-Lz-dIX"/>
                             <constraint firstItem="glJ-aV-vlQ" firstAttribute="top" secondItem="cWm-Y9-BmL" secondAttribute="bottom" constant="20" id="KRY-TQ-aHn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cWm-Y9-BmL" secondAttribute="trailing" constant="20" id="LLV-sU-0Ba"/>
                             <constraint firstAttribute="trailingMargin" secondItem="atc-09-0dc" secondAttribute="trailing" constant="20" id="LeN-FO-UZo"/>
                             <constraint firstItem="JoK-2J-MdQ" firstAttribute="leading" secondItem="Hbo-Um-rBz" secondAttribute="leadingMargin" constant="20" id="MNQ-H8-f8C"/>
                             <constraint firstItem="atc-09-0dc" firstAttribute="leading" secondItem="Hbo-Um-rBz" secondAttribute="leadingMargin" constant="20" id="Oar-Eb-lNZ"/>
-                            <constraint firstItem="JoK-2J-MdQ" firstAttribute="top" secondItem="W22-uY-usO" secondAttribute="bottom" constant="40" id="TGw-rw-8Xp"/>
+                            <constraint firstItem="tX0-Hd-p1v" firstAttribute="leading" secondItem="Hbo-Um-rBz" secondAttribute="leadingMargin" constant="20" id="XIt-EA-dvp"/>
                             <constraint firstItem="W22-uY-usO" firstAttribute="top" secondItem="jTb-1D-uFh" secondAttribute="bottom" constant="20" id="XJz-PZ-QWo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JoK-2J-MdQ" secondAttribute="trailing" constant="20" id="gMK-z9-HC0"/>
                             <constraint firstItem="W22-uY-usO" firstAttribute="leading" secondItem="Hbo-Um-rBz" secondAttribute="leadingMargin" constant="20" id="h8w-kT-WnC"/>
                             <constraint firstItem="gzM-oI-li0" firstAttribute="leading" secondItem="Hbo-Um-rBz" secondAttribute="leadingMargin" constant="20" id="mnv-tF-Dir"/>
+                            <constraint firstItem="tX0-Hd-p1v" firstAttribute="top" secondItem="W22-uY-usO" secondAttribute="bottom" id="pAJ-Bu-YT9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tX0-Hd-p1v" secondAttribute="trailing" constant="20" id="sCv-RZ-2sF"/>
                             <constraint firstItem="atc-09-0dc" firstAttribute="top" secondItem="JoK-2J-MdQ" secondAttribute="bottom" constant="40" id="vTC-Rl-ixc"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="doutoConstantLabel" destination="tX0-Hd-p1v" id="2Tc-wf-h9i"/>
                         <outlet property="douyoLabel" destination="W22-uY-usO" id="QLf-TH-jRk"/>
                         <outlet property="lockButton" destination="gzM-oI-li0" id="oTo-KX-8wX"/>
+                        <outlet property="negativeButton" destination="atc-09-0dc" id="Cn3-Rv-7xn"/>
+                        <outlet property="positiveButton" destination="JoK-2J-MdQ" id="IFw-Hq-F0b"/>
                         <outlet property="resultButton" destination="cWm-Y9-BmL" id="6F9-t0-Xh2"/>
                     </connections>
                 </viewController>

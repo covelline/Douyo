@@ -13,6 +13,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var bottomSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var questionButton: UIButton!
+    @IBOutlet weak var douyoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,17 @@ class QuestionViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.view.backgroundColor = UIColor.baseColor()
+        self.questionTextView.tintColor = UIColor.baseColor()
+        self.questionTextView.backgroundColor = UIColor.lowColor()
+        self.questionTextView.textColor = UIColor.baseColor()
+        
+        self.questionButton.tintColor = UIColor.baseColor()
+        self.questionButton.backgroundColor = UIColor.lowColor()
+        
+        self.douyoLabel.backgroundColor = UIColor.lowColor()
+        self.douyoLabel.textColor = UIColor.baseColor()
         
         questionTextView.becomeFirstResponder()
         updateQuestionButtonState()

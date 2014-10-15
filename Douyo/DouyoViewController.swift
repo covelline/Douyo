@@ -31,6 +31,12 @@ class DouyoViewController: UIViewController {
     }
 
     @IBOutlet weak var douyoLabel: UILabel!
+    
+    @IBOutlet weak var positiveButton: UIButton!
+    
+    @IBOutlet weak var doutoConstantLabel: UILabel!
+    @IBOutlet weak var negativeButton: UIButton!
+    
     @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var lockButton: UIButton!
     
@@ -40,6 +46,27 @@ class DouyoViewController: UIViewController {
         self.navigationItem.title = NSLocalizedString("どうよ？", comment: "comment")
         douyoLabel.text = question
         isLock = true
+        
+        self.view.backgroundColor = UIColor.baseColor()
+        
+        self.douyoLabel.backgroundColor = UIColor.lowColor()
+        self.douyoLabel.textColor = UIColor.baseColor()
+        
+        self.doutoConstantLabel.backgroundColor = UIColor.lowColor()
+        self.doutoConstantLabel.textColor = UIColor.baseColor()
+        
+        self.positiveButton.tintColor = UIColor.baseColor()
+        self.positiveButton.backgroundColor = UIColor.lowColor()
+        
+        self.negativeButton.tintColor = UIColor.baseColor()
+        self.negativeButton.backgroundColor = UIColor.lowColor()
+
+        
+        self.lockButton.tintColor = UIColor.baseColor()
+        self.lockButton.backgroundColor = UIColor.lowColor()
+        
+        self.resultButton.tintColor = UIColor.baseColor()
+        self.resultButton.backgroundColor = UIColor.lowColor()
     }
 
     @IBAction func pushPositiveButton(sender: UIButton) {

@@ -27,11 +27,18 @@ class ResultViewController: UIViewController {
             }
         }
     }
+    @IBOutlet weak var questionLabelContainer: UIView!
     
+    @IBOutlet weak var douyoConstantLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var positiveLabelContainer: UIView!
+    @IBOutlet weak var positiveTitleLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var positiveCountLabel: UILabel!
     @IBOutlet weak var negativeCountLabel: UILabel!
     
+    @IBOutlet weak var negativeTitleLabel: UILabel!
+    @IBOutlet weak var negativeLabelContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +49,22 @@ class ResultViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationItem.title = NSLocalizedString("結果", comment: "comment")
         
+        self.view.backgroundColor = UIColor.baseColor()
+        
+        self.questionLabelContainer.backgroundColor = UIColor.lowColor()
+        self.questionLabel.textColor = UIColor.baseColor()
+        self.douyoConstantLabel.textColor = UIColor.baseColor()
+        
+        self.positiveLabelContainer.backgroundColor = UIColor.lowColor()
+        self.positiveCountLabel.textColor = UIColor.baseColor()
+        self.positiveTitleLabel.textColor = UIColor.baseColor()
+        
+        self.negativeLabelContainer.backgroundColor = UIColor.lowColor()
+        self.negativeCountLabel.textColor = UIColor.baseColor()
+        self.negativeTitleLabel.textColor = UIColor.lowColor()
+        
+        self.closeButton.tintColor = UIColor.baseColor()
+        self.closeButton.backgroundColor = UIColor.lowColor()
     }
     
     @IBAction func pushClose(sender: AnyObject) {
