@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51d-IJ-2aN">
-                                <rect key="frame" x="16" y="328" width="288" height="100"/>
+                                <rect key="frame" x="16" y="248" width="288" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf7-DY-4Xz">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-CJ-oex">
-                                <rect key="frame" x="16" y="208" width="288" height="100"/>
+                                <rect key="frame" x="16" y="128" width="288" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFm-Ed-pm8">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="100"/>
@@ -67,8 +67,22 @@
                                     <constraint firstAttribute="bottom" secondItem="KFm-Ed-pm8" secondAttribute="bottom" id="z0f-uv-gdS"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUQ-wM-NdB">
+                                <rect key="frame" x="16" y="508" width="288" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="xvT-As-SL6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushClose:" destination="XzL-pF-CO0" eventType="touchUpInside" id="ueJ-FI-AIP"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3km-hK-Sz3">
-                                <rect key="frame" x="16" y="448" width="288" height="100"/>
+                                <rect key="frame" x="16" y="368" width="288" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-zr-9CC">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -102,13 +116,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="51d-IJ-2aN" secondAttribute="trailing" id="516-6u-cdR"/>
+                            <constraint firstItem="xUQ-wM-NdB" firstAttribute="top" secondItem="3km-hK-Sz3" secondAttribute="bottom" constant="40" id="8e0-jX-7TA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xUQ-wM-NdB" secondAttribute="trailing" id="FGg-Ux-Pmb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3km-hK-Sz3" secondAttribute="trailing" id="J6R-of-aXl"/>
+                            <constraint firstItem="xUQ-wM-NdB" firstAttribute="leading" secondItem="dvr-FI-Hmp" secondAttribute="leadingMargin" id="K5U-su-2Oy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="npQ-CJ-oex" secondAttribute="trailing" id="LBd-XV-lzN"/>
                             <constraint firstItem="3km-hK-Sz3" firstAttribute="top" secondItem="51d-IJ-2aN" secondAttribute="bottom" constant="20" id="XuN-2A-UYh"/>
                             <constraint firstItem="51d-IJ-2aN" firstAttribute="top" secondItem="npQ-CJ-oex" secondAttribute="bottom" constant="20" id="XvO-bo-0Hn"/>
                             <constraint firstItem="3km-hK-Sz3" firstAttribute="leading" secondItem="dvr-FI-Hmp" secondAttribute="leadingMargin" id="ZGZ-gn-T5w"/>
+                            <constraint firstItem="du7-47-VZp" firstAttribute="top" secondItem="xUQ-wM-NdB" secondAttribute="bottom" id="hNK-id-2TV"/>
                             <constraint firstItem="51d-IJ-2aN" firstAttribute="leading" secondItem="dvr-FI-Hmp" secondAttribute="leadingMargin" id="t9w-UZ-b3y"/>
-                            <constraint firstItem="du7-47-VZp" firstAttribute="top" secondItem="3km-hK-Sz3" secondAttribute="bottom" constant="20" id="yfu-Lc-ZNs"/>
                             <constraint firstItem="npQ-CJ-oex" firstAttribute="leading" secondItem="dvr-FI-Hmp" secondAttribute="leadingMargin" id="zka-0C-joS"/>
                         </constraints>
                     </view>
@@ -121,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91e-Pz-6zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="631"/>
+            <point key="canvasLocation" x="-79" y="95"/>
         </scene>
     </scenes>
 </document>

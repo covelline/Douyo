@@ -13,14 +13,33 @@ class DouyoViewController: UIViewController {
     var question: String?
     var positiveCount: Int = 0
     var negativeCount: Int = 0
-
+    var isLock: Bool = false {
+        didSet {
+            
+            if let button = resultButton {
+                button.enabled = !isLock
+            }
+            if let button = lockButton {
+                
+                if isLock {
+                    button.setTitle(NSLocalizedString("Unlock", comment: "comment"), forState: UIControlState.Normal)
+                } else {
+                    button.setTitle(NSLocalizedString("Lock", comment: "comment"), forState: UIControlState.Normal)
+                }
+            }
+        }
+    }
 
     @IBOutlet weak var douyoLabel: UILabel!
+    @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet weak var lockButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = NSLocalizedString("どうよ？", comment: "comment")
         douyoLabel.text = question
+        isLock = true
     }
 
     @IBAction func pushPositiveButton(sender: UIButton) {
@@ -39,6 +58,12 @@ class DouyoViewController: UIViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func pushLockButton(sender: UIButton) {
+        
+        isLock = !isLock
+    }
+
 }
 
 extension DouyoViewController {

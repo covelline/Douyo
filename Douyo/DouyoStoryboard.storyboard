@@ -69,6 +69,9 @@
                                 <state key="normal" title="Lock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushLockButton:" destination="r5U-0i-KGq" eventType="touchUpInside" id="xdF-oC-0H6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◯◯ってどうよ？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W22-uY-usO">
                                 <rect key="frame" x="36" y="40" width="248" height="158"/>
@@ -99,6 +102,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="douyoLabel" destination="W22-uY-usO" id="QLf-TH-jRk"/>
+                        <outlet property="lockButton" destination="gzM-oI-li0" id="oTo-KX-8wX"/>
+                        <outlet property="resultButton" destination="cWm-Y9-BmL" id="6F9-t0-Xh2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kmi-9X-lBk" userLabel="First Responder" sceneMemberID="firstResponder"/>

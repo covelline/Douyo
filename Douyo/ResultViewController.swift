@@ -38,6 +38,15 @@ class ResultViewController: UIViewController {
         questionLabel.text = question
         positiveCountLabel.text = "\(positiveCount)"
         negativeCountLabel.text = "\(negativeCount)"
+        
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = NSLocalizedString("結果", comment: "comment")
+        
+    }
+    
+    @IBAction func pushClose(sender: AnyObject) {
+        
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

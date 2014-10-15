@@ -19,12 +19,18 @@ class QuestionViewController: UIViewController {
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChangeFrame:", name: UIKeyboardWillChangeFrameNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textViewDidChange:", name: UITextViewTextDidChangeNotification, object: questionTextView)
-        questionTextView.becomeFirstResponder()
-        updateQuestionButtonState()
+        
     }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        questionTextView.becomeFirstResponder()
+        updateQuestionButtonState()
     }
     
     func updateQuestionButtonState() {
@@ -70,7 +76,9 @@ class QuestionViewController: UIViewController {
         let question = questionTextView.text
         let vc: DouyoViewController = DouyoViewController.instanceateFromStoryboardWithQuestion(question)
         
-        self.navigationController?.pushViewController(vc, animated: true)
+        let nav: UINavigationController = UINavigationController(rootViewController: vc)
+        
+        presentViewController(nav, animated: true, completion: nil)
     }
 }
 
